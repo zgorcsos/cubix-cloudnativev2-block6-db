@@ -1,0 +1,39 @@
+openapi: 3.0.3
+info:
+  title: Cloud Native Training - DB application
+  description: |-
+    Cubix Cloud Native Application Development Training Block4 - DB application.
+  contact:
+    email: csendes.david@alerant.hu
+  version: 1.0.0-SNAPSHOT
+servers:
+  - url: http://localhost:8081
+    description: Local development
+paths:
+  /message/recent:
+    get:
+      summary: Retrieve recent messages
+      description: Returns the last 5 stored messages
+      operationId: getRecent
+      responses:
+        '200':
+          description: the sum of the two numbers
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /message:
+    post:
+      summary: Enters new message
+      description: Stores the incoming message in the database
+      operationId: storeNew
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              type: string
+      responses:
+        '201':
+          description: The message has been stored
