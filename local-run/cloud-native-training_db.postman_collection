@@ -38,13 +38,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/training/store",
+					"raw": "{{host}}/message",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"training",
-						"store"
+						"message"
 					]
 				}
 			},
